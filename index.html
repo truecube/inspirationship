@@ -1,94 +1,179 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Inspire Love</title>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8103865880069014"
-     crossorigin="anonymous"></script>
-  <style>
-    /* Global Styles */
-    body {
-      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(135deg, #FFDEE9, #B5FFFC);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-    }
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    /* Container Styling */
-    .container {
-      text-align: center;
-      background: rgba(255, 255, 255, 0.85);
-      padding: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-      max-width: 600px;
-      margin: 20px;
-    }
-    
-    /* Heading and Paragraphs */
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      color: #333;
-    }
-    
-    p {
-      font-size: 1.2rem;
-      margin-bottom: 1.5rem;
-      color: #555;
-    }
-    
-    /* Quote Styling */
-    #quote {
-      font-style: italic;
-      margin-bottom: 1.5rem;
-    }
-    
-    /* Button Styling */
-    button {
-      background: #ff6f61;
-      color: #fff;
-      border: none;
-      padding: 0.8rem 1.5rem;
-      font-size: 1rem;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-    
-    button:hover {
-      background: #ff3b2e;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h1>Inspire Love</h1>
-    <p>Every relationship starts with a spark. Embrace the journey and let inspiration guide you.</p>
-    <p id="quote">"Love is not just about finding the right person, but creating a right relationship."</p>
-    <button onclick="newQuote()">Inspire Me</button>
-  </div>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 
-  <script>
-    // List of inspirational quotes about relationships
-    const quotes = [
-      "Love is not just about finding the right person, but creating a right relationship.",
-      "The best relationships are the ones where you can be yourself and still be loved for it.",
-      "A strong relationship requires choosing to love each other, even on days when it’s hard.",
-      "In a world where you can be anything, be kind and love deeply.",
-      "The most beautiful relationships remind us to never stop believing in love."
-    ];
+    <title>Blog Website</title>
+  </head>
+  <body>
+    <!-- Nav bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Relationship Blog</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Blog</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">HTML</a></li>
+                <li><a class="dropdown-item" href="#">CSS</a></li>
+                <li> <hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">JavaScript</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contact.html">Contact</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
 
-    // Function to display a new random quote
-    function newQuote() {
-      const randomIndex = Math.floor(Math.random() * quotes.length);
-      document.getElementById('quote').textContent = quotes[randomIndex];
-    }
-  </script>
-</body>
+    <!-- Carousel -->
+    <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="images/back.jpg" class="d-block w-100">
+          <div class="carousel-caption d-none d-md-block">
+            <h2>Welcome to Inspirationship</h2>
+            <p>Blogs about relationship</p>
+          </div> 
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <div class="container my-4">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="images/freedo.jpg" class="bd-placeholder-img card-img-top" width="100%" height="600">
+            <div class="card-body">
+              <p class="card-text">Power of freedom.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <!-- <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondry">Read</button>
+                </div> -->
+                <small class="text-muted">5 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <a href="introspection.html">
+            <div class="card shadow-sm">
+              <img src="images/introspection.jpg" class="bd-placeholder-img card-img-top" width="100%" height="600">
+              <div class="card-body">
+                <p class="card-text">Power of introspection.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <!-- <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondry">View</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondry">Edit</button>
+                  </div> -->
+                  <small class="text-muted">32 mins</small>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col">
+          <a href="growing-old.html">
+            <div class="card shadow-sm">
+              <img src="images/priceless.jpg" class="bd-placeholder-img card-img-top" width="100%" height="600">
+              <div class="card-body">
+                <p class="card-text">Growing old together.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <small class="text-muted">1 hr</small>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col">
+            <a href="smile.html">
+                <div class="card shadow-sm">
+                    <img src="images/smile.jpg" class="bd-placeholder-img card-img-top" width="100%" height="600">
+                    <div class="card-body">
+                    <p class="card-text">Power of Smile.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <small class="text-muted">4 hrs</small>
+                    </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="col">
+            <a href="sorry.html">
+                <div class="card shadow-sm">
+                    <img src="images/sorry.jpg" class="bd-placeholder-img card-img-top" width="100%" height="600">
+                    <div class="card-body">
+                    <p class="card-text">Power of Sorry.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <small class="text-muted">5 min</small>
+                    </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="col">
+            <a href="care.html">
+                <div class="card shadow-sm">
+                    <img src="images/care.jpg" class="bd-placeholder-img card-img-top" width="100%" height="600">
+                    <div class="card-body">
+                    <p class="card-text">Power of Care.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <small class="text-muted">5 min</small>
+                    </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="container" justify-content="center" align-items="center">
+      <footer class="blog-footer">
+        <p>Copyright 2023
+          <a href="#">@Coding Blog</a></p>
+          <p>
+            <a href="#" class="nav-link active">Back to top</a>
+          </p>
+      </footer>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
+  </body>
 </html>

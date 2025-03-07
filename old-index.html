@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inspire Love</title>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8103865880069014"
+     crossorigin="anonymous"></script>
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #FFDEE9, #B5FFFC);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    
+    /* Container Styling */
+    .container {
+      text-align: center;
+      background: rgba(255, 255, 255, 0.85);
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      max-width: 600px;
+      margin: 20px;
+    }
+    
+    /* Heading and Paragraphs */
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #333;
+    }
+    
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+      color: #555;
+    }
+    
+    /* Quote Styling */
+    #quote {
+      font-style: italic;
+      margin-bottom: 1.5rem;
+    }
+    
+    /* Button Styling */
+    button {
+      background: #ff6f61;
+      color: #fff;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    
+    button:hover {
+      background: #ff3b2e;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Inspire Love</h1>
+    <p>Every relationship starts with a spark. Embrace the journey and let inspiration guide you.</p>
+    <p id="quote">"Love is not just about finding the right person, but creating a right relationship."</p>
+    <button onclick="newQuote()">Inspire Me</button>
+  </div>
+
+  <script>
+    // List of inspirational quotes about relationships
+    const quotes = [
+      "Love is not just about finding the right person, but creating a right relationship.",
+      "The best relationships are the ones where you can be yourself and still be loved for it.",
+      "A strong relationship requires choosing to love each other, even on days when it’s hard.",
+      "In a world where you can be anything, be kind and love deeply.",
+      "The most beautiful relationships remind us to never stop believing in love."
+    ];
+
+    // Function to display a new random quote
+    function newQuote() {
+      const randomIndex = Math.floor(Math.random() * quotes.length);
+      document.getElementById('quote').textContent = quotes[randomIndex];
+    }
+  </script>
+</body>
+</html>
